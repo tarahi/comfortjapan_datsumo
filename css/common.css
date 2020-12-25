@@ -4179,15 +4179,15 @@ button {
     @media screen and (min-width: 768px) {
       .voice-title {
         font-size: 36px;
-        letter-spacing: 3px;
-        padding: 35px 0;
+        letter-spacing: 3.5px;
+        padding: 37px 0;
         box-shadow: 0 0 20px #e8d4b7; } }
     @media screen and (max-width: 767px) {
       .voice-title {
         position: relative;
         font-size: 2.3rem;
         letter-spacing: .04em;
-        padding: 1.5rem 0 1.5rem 15.5rem;
+        padding: 1.5rem 0 1.5rem 15.7rem;
         box-shadow: 0 0 .05rem #e8d4b7; } }
     @media screen and (max-width: 767px) {
       .voice-title .content-wrapper {
@@ -4195,13 +4195,10 @@ button {
     @media screen and (min-width: 768px) {
       .voice-title h2 {
         position: relative;
-        display: inline-block;
-        margin: 0 0 0 400px; } }
+        text-align: center; } }
     @media screen and (min-width: 768px) {
-      .voice-title h2 {
-        position: relative;
-        display: inline-block;
-        margin: 0 0 0 400px; } }
+      .voice-title-relative {
+        position: relative; } }
     @media screen and (min-width: 768px) {
       .voice-title-icn {
         position: absolute;
@@ -4209,7 +4206,7 @@ button {
         content: "";
         width: 181px;
         height: 181px;
-        left: -220px;
+        left: -224px;
         top: 50%;
         transform: translateY(-50%); } }
     @media screen and (max-width: 767px) {
@@ -4219,7 +4216,7 @@ button {
         content: "";
         width: 11.85rem;
         height: 11.85rem;
-        left: 2.1rem;
+        left: 2.6rem;
         top: 50%;
         transform: translateY(-50%); } }
   @media screen and (min-width: 768px) {
@@ -4530,11 +4527,11 @@ button {
 
 @media screen and (min-width: 768px) {
   .needs {
-    padding: 90px 0; } }
+    padding: 90px 0 50px; } }
 
 @media screen and (max-width: 767px) {
   .needs {
-    padding: 5rem 0; } }
+    padding: 5rem 0 2.8rem; } }
 
 .needs-title {
   padding: 0 0 40px;
@@ -4636,6 +4633,20 @@ button {
 @media screen and (max-width: 767px) {
   .needs-sp-content {
     margin-top: 15px; } }
+
+@media screen and (min-width: 768px) {
+  .needs-note {
+    padding: 33px 15px 0 0;
+    font-size: 14px;
+    text-align: right;
+    line-height: 1.5;
+    letter-spacing: .03em; } }
+@media screen and (max-width: 767px) {
+  .needs-note {
+    padding: 1.8rem 0 0 1rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    letter-spacing: .03em; } }
 
 .question {
   background-color: #f6f6f6; }
