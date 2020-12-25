@@ -235,22 +235,27 @@ RENAISSANCE.VoiceSlider.prototype = {
 
   setParameters : function() {
     this.setDevice();
-    this.setSlider();
+    if(this.device == 'PC') {
+      this.setSlider();
+      this.sliderFlg = true
+    } else {
+      this.sliderFlg = false
+    }
   },
 
-  // bindEvents : function() {
-  //   var _this = this;
-  //   this.$window.on('resize', function(e){
-  //     _this.setDevice();
-  //     if(_this.device == 'PC' & !_this.sliderFlg){
-  //       _this.setSlider();
-  //       _this.sliderFlg = true
-  //     } else if(_this.device == 'SP' & _this.sliderFlg) {
-  //       _this.offSlider();
-  //       _this.sliderFlg = false
-  //     }
-  //   })
-  // },
+  bindEvents : function() {
+    var _this = this;
+    this.$window.on('resize', function(e){
+      _this.setDevice();
+      if(_this.device == 'PC' & !_this.sliderFlg){
+        _this.setSlider();
+        _this.sliderFlg = true
+      } else if(_this.device == 'SP' & _this.sliderFlg) {
+        _this.offSlider();
+        _this.sliderFlg = false
+      }
+    })
+  },
 
   setDevice : function() {
     this.device = this.$window.outerWidth() > 768? 'PC': 'SP';
@@ -264,21 +269,12 @@ RENAISSANCE.VoiceSlider.prototype = {
       nextArrow: '<button class="slide-arrow next-arrow"></button>',
       dotsClass: 'slide-dots',
       slidesToShow: 3,
-      slidesToScroll: 3,
-      responsive: [
-        {
-          breakpoint:767,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        }
-      ]
+      slidesToScroll: 3
     });
   },
 
-  // offSlider : function() {
-  //   this.$base.slick('unslick')
-  // }
+  offSlider : function() {
+    this.$base.slick('unslick')
+  }
 
 }
