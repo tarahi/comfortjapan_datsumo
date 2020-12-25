@@ -230,7 +230,7 @@ RENAISSANCE.VoiceSlider = function ( $base ) {
 RENAISSANCE.VoiceSlider.prototype = {
   init : function() {
     this.setParameters();
-    this.bindEvents();
+    // this.bindEvents();
   },
 
   setParameters : function() {
